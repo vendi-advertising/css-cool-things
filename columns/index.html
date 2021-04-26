@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Column Demo</title>
+    <style>
+        html {
+            font-size: 62.5%;
+            font-family: sans-serif;
+        }
+
+        body, li {
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            margin: 4rem auto 0 auto;
+            text-align: center;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 80rem;
+            columns: 4 20ch;
+            /*column-count: 4;*/
+            column-gap: 2rem;
+            column-rule: #9115ca solid 1rem;
+        }
+
+        div > h3 {
+            background-color: #ac1212;
+            color: #fff;
+            column-span: all;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        p + p {
+            margin-top: 2rem;
+        }
+
+        div:first-of-type {
+            column-rule: none;
+        }
+
+        div ~ div ~ div {
+            column-rule: #ac1212 double 0.5rem;
+        }
+
+        div ~ div ~ div > p {
+            text-align: justify;
+        }
+
+        ul {
+            font-size: 0;
+            margin: 0 auto;
+            max-width: 80rem;
+        }
+
+        ul > li {
+            max-width: 20ch;
+            width: 100%;
+        }
+
+        ul:first-of-type {
+            columns: 4 20ch;
+        }
+
+        ul:nth-of-type(2) li {
+            display: inline-block;
+            max-width: 22ch;
+        }
+
+        ul:nth-of-type(2) li::before {
+            content: "";
+            display: list-item;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<h2>4 columns</h2>
+<div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur deleniti eos eveniet fugiat
+        impedit incidunt itaque iusto omnis praesentium quas qui, quo ratione repudiandae sint sunt temporibus,
+        voluptate? Assumenda! Adipisci delectus obcaecati provident, quam sunt tempora?
+    </p>
+    <p>
+        Aut deserunt dolorem dolorum eaque eos harum illo libero maxime minus neque odit pariatur quas quis rem, vero?
+        Eligendi est quibusdam quo temporibus!
+    </p>
+    <p>
+        A ad, adipisci commodi consectetur deleniti deserunt dolorem ducimus earum eius eligendi eveniet exercitationem
+        illum in laudantium maxime minima molestiae, neque nobis officiis pariatur recusandae reiciendis tempora ullam
+        ut voluptatibus.
+    </p>
+    <p>
+        Accusamus amet exercitationem fugiat ipsam natus saepe, vel. Corporis culpa deleniti dicta dolores
+        exercitationem laudantium minus, modi nemo neque rem totam vero, vitae voluptatem. Autem impedit minima nesciunt
+        officiis quod
+    </p>
+</div>
+
+<h2>4 columns with wide purple rule</h2>
+<div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur deleniti eos eveniet fugiat
+        impedit incidunt itaque iusto omnis praesentium quas qui, quo ratione repudiandae sint sunt temporibus,
+        voluptate? Assumenda! Adipisci delectus obcaecati provident, quam sunt tempora?
+    </p>
+    <p>
+        Aut deserunt dolorem dolorum eaque eos harum illo libero maxime minus neque odit pariatur quas quis rem, vero?
+        Eligendi est quibusdam quo temporibus!
+    </p>
+    <p>
+        A ad, adipisci commodi consectetur deleniti deserunt dolorem ducimus earum eius eligendi eveniet exercitationem
+        illum in laudantium maxime minima molestiae, neque nobis officiis pariatur recusandae reiciendis tempora ullam
+        ut voluptatibus.
+    </p>
+    <p>
+        Accusamus amet exercitationem fugiat ipsam natus saepe, vel. Corporis culpa deleniti dicta dolores
+        exercitationem laudantium minus, modi nemo neque rem totam vero, vitae voluptatem. Autem impedit minima nesciunt
+        officiis quod
+    </p>
+</div>
+
+<h2>4 columns with heading</h2>
+<div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur deleniti eos eveniet fugiat
+        impedit incidunt itaque iusto omnis praesentium quas qui, quo ratione repudiandae sint sunt temporibus,
+        voluptate? Assumenda! Adipisci delectus obcaecati provident, quam sunt tempora?
+    </p>
+    <h3>A internal heading spanning</h3>
+    <p>
+        Aut deserunt dolorem dolorum eaque eos harum illo libero maxime minus neque odit pariatur quas quis rem, vero?
+        Eligendi est quibusdam quo temporibus!
+    </p>
+    <p>
+        A ad, adipisci commodi consectetur deleniti deserunt dolorem ducimus earum eius eligendi eveniet exercitationem
+        illum in laudantium maxime minima molestiae, neque nobis officiis pariatur recusandae reiciendis tempora ullam
+        ut voluptatibus.
+    </p>
+    <p>
+        Accusamus amet exercitationem fugiat ipsam natus saepe, vel. Corporis culpa deleniti dicta dolores
+        exercitationem laudantium minus, modi nemo neque rem totam vero, vitae voluptatem. Autem impedit minima nesciunt
+        officiis quod
+    </p>
+</div>
+
+<h2>List top to bottom, left to right</h2>
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+    <li>K</li>
+</ul>
+
+<h2>List left to right, top to bottom</h2>
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+</ul>
+</body>
+</html>
