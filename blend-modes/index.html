@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Blend Modes Demo</title>
+    <style>
+        html {
+            font-size: 62.5%;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-image: url(coco.jpg);
+            background-color: red;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+    </style>
+</head>
+<body>
+<div class="control">
+    <input type="color"/>
+    <select>
+        <option selected>normal</option>
+        <option>multiply</option>
+        <option>screen</option>
+        <option>overlay</option>
+        <option>darken</option>
+        <option>lighten</option>
+        <option>color-dodge</option>
+        <option>color-burn</option>
+        <option>hard-light</option>
+        <option>soft-light</option>
+        <option>difference</option>
+        <option>exclusion</option>
+        <option>hue</option>
+        <option>saturation</option>
+        <option>color</option>
+        <option>luminosity</option>
+    </select>
+</div>
+<script>
+    document
+        .querySelector('input[type=color]')
+        .addEventListener(
+            'input',
+            (evt) => {
+                document.body.style.backgroundColor = evt.currentTarget.value;
+            }
+        );
+    document
+        .querySelector('select')
+        .addEventListener(
+            'change',
+            (evt) => {
+                document.body.style.backgroundBlendMode = evt.currentTarget.value;
+            }
+        );
+</script>
+</body>
+</html>
