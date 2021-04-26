@@ -9,6 +9,12 @@
             font-family: sans-serif;
         }
 
+        h2 {
+            font-size: 3rem;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
         p {
             font-size: 1.8rem;
             margin: 0 auto;
@@ -16,17 +22,54 @@
             text-align: justify;
         }
 
-        p > img {
+        p.shape-image > img {
             float: left;
             height: 25rem;
             shape-outside: url(./dog-yoda.webp);
             transform: translateX(-1.5rem);
         }
+
+        p.shape-circle > span {
+            float: left;
+            height: 25rem;
+            shape-outside: circle(10rem);
+            width: 25rem;
+        }
+
+        p.shape-polygon > span {
+            float: left;
+            height: 25rem;
+            shape-outside: polygon(20rem 8rem, 0rem 15rem, 0 1rem);
+            width: 25rem;
+        }
     </style>
 </head>
 <body>
-<p>
+<h2>Image demo</h2>
+<p class="shape-image">
     <img alt="" src="./dog-yoda.webp"/>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nisl sollicitudin, vulputate est vitae,
+    faucibus augue. Fusce feugiat diam accumsan libero dictum, nec scelerisque mi ornare. In hac habitasse platea
+    dictumst. Nam pulvinar, ipsum quis porta volutpat, neque nunc egestas est, id porttitor erat dui lacinia lacus. Sed
+    lobortis tellus in ipsum finibus, ac aliquam ipsum venenatis. Pellentesque aliquet sed est in pellentesque. Class
+    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris cursus consectetur
+    sapien ullamcorper mattis. Duis consequat nisl risus, at molestie leo congue non. Sed ullamcorper neque quis tortor
+    fringilla, in tempor leo ullamcorper.
+</p>
+<h2>Circle demo</h2>
+<p class="shape-circle">
+    <span></span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nisl sollicitudin, vulputate est vitae,
+    faucibus augue. Fusce feugiat diam accumsan libero dictum, nec scelerisque mi ornare. In hac habitasse platea
+    dictumst. Nam pulvinar, ipsum quis porta volutpat, neque nunc egestas est, id porttitor erat dui lacinia lacus. Sed
+    lobortis tellus in ipsum finibus, ac aliquam ipsum venenatis. Pellentesque aliquet sed est in pellentesque. Class
+    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris cursus consectetur
+    sapien ullamcorper mattis. Duis consequat nisl risus, at molestie leo congue non. Sed ullamcorper neque quis tortor
+    fringilla, in tempor leo ullamcorper.
+</p>
+<h2>Path demo</h2>
+<p class="shape-polygon">
+    <span></span>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nisl sollicitudin, vulputate est vitae,
     faucibus augue. Fusce feugiat diam accumsan libero dictum, nec scelerisque mi ornare. In hac habitasse platea
     dictumst. Nam pulvinar, ipsum quis porta volutpat, neque nunc egestas est, id porttitor erat dui lacinia lacus. Sed
