@@ -9,7 +9,13 @@
             font-family: sans-serif;
         }
 
-        h1 {
+        h2 {
+            font-size: 3rem;
+            margin: 4rem auto 0 auto;
+            text-align: center;
+        }
+
+        body > h3 {
             background-clip: text;
             -webkit-background-clip: text;
             background-image: url('./bodie.jpg');
@@ -18,9 +24,33 @@
             margin: 0 auto;
             text-align: center;
         }
+
+        body > div {
+            background-image: url('./bodie.jpg');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: contain;
+            height: 80rem;
+            padding-top: 10rem;
+        }
+
+        body > div > h3 {
+            background-color: #fff;
+            font-size: 15rem;
+            margin: 0 auto;
+            mix-blend-mode: screen;
+            padding: 2rem;
+            text-align: center;
+            width: 60rem;
+        }
     </style>
 </head>
 <body>
-<h1>Obey my dog!</h1>
+<h2>Cutout text out with background image</h2>
+<h3>Obey my dog!</h3>
+<h2>Full background image without cutout text</h2>
+<div>
+    <h3>Obey my dog!</h3>
+</div>
 </body>
 </html>
